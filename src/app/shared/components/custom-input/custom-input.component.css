@@ -1,0 +1,13 @@
+.custom-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #F2F2F2;
+    border-radius: 6px;
+    font-size: 14px;
+    height: 45px;
+    outline: none;
+}
+
+.custom-input:focus {
+    border-color: #cac9c9;
+}
