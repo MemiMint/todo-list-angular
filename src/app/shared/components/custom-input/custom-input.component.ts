@@ -10,34 +10,34 @@ import { ICustomInput, InputType } from "./custom-input.type";
     providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESOR]
 })
 export class CustomInputComponent extends CustomInput implements ICustomInput {
-    private inputPlaceholder: string = "";
-    private inputType: InputType = "text";
-    private isInputDisabled: boolean = false;
+    private _placeholder: string = "";
+    private _type: InputType = "text";
+    private _disabled: boolean = false;
 
     get placeholder(): string {
-        return this.inputPlaceholder;
+        return this._placeholder;
     }
 
     get type(): InputType {
-        return this.inputType;
+        return this._type;
     }
 
     get disabled(): boolean {
-        return this.isInputDisabled;
+        return this._disabled;
     }
 
     @Input("placeholder")
-    set placeholder(text: string) {
-        this.inputPlaceholder = text;
+    set placeholder($placeholder: string) {
+        this._placeholder = $placeholder;
     }
 
     @Input("type")
-    set type(inputType: InputType) {
-        this.inputType = inputType;
+    set type($type: InputType) {
+        this._type = $type;
     }
 
     @Input("disabled")
-    set isDisabled(disabled: boolean) {
-        this.isInputDisabled = disabled;
+    set isDisabled($disabled: boolean) {
+        this._disabled = $disabled;
     }
 }

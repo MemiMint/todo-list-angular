@@ -1,26 +1,34 @@
 <div class="bg">
     <div style="position: relative;" class="login-form">
-        <div *ngIf="isLoading" class="loader-container">
+        <div *ngIf="loading" class="loader-container">
             <loader></loader>
         </div>
         <div class="logo">
             <img src="../../../../assets/angular-svgrepo-com.svg" alt="" srcset="">
         </div>
-        <h3 style="text-align: center; padding: 20px; color: #292B2F;" >One account, Many Possibilites</h3>
-        <div class="form-container" >
-            <custom-input placeholder="E-mail Adress" type="email" [(ngModel)]="email" ></custom-input>
-            <custom-input placeholder="Password" type="password"  ></custom-input>
+        <h3 style="text-align: center; padding: 20px; color: #292B2F;">One account, Many Possibilites</h3>
+        <div class="form-container">
+            <custom-input placeholder="E-mail Adress" type="email" [(ngModel)]="email"></custom-input>
+            <custom-input placeholder="Password" type="password"></custom-input>
         </div>
         <div class="remember-me">
-            <label class="chk" >
+            <label class="chk">
                 <input class="chk" [(ngModel)]="rememberMe" type="checkbox" name="" id="">
                 <p>remember me</p>
             </label>
-            <span style="color: #F73E00; font-weight: 600; ">Forgot password?</span>
+            <span>
+                <a routerLink="/signup" style="color: #F73E00; font-weight: 600; text-decoration: none;">Forgot password?</a>
+            </span>
         </div>
         <div style="width: 100%;">
             <custom-btn [onClick]="signIn" text="Sign In"></custom-btn>
         </div>
-        <p style="margin-top: 20px; font-size: 14px;" >No account yet? <span style="color: #F73E00; font-weight: 600;">Sign up</span></p>
+        <p style="margin-top: 20px; font-size: 14px;">No account yet? 
+            <span>
+                <a routerLink="/signup" style="color: #F73E00; font-weight: 600; text-decoration: none;">
+                    Sign up
+                </a>
+            </span>
+        </p>
     </div>
 </div>

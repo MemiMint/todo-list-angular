@@ -1,0 +1,28 @@
+<div class="bg">
+    <div style="position: relative;" class="signup-form">
+        <div *ngIf="loading" class="loader-container">
+            <loader></loader>
+        </div>
+        <div class="logo">
+            <img src="../../../../assets/angular-svgrepo-com.svg" alt="" srcset="">
+        </div>
+        <h3 style="text-align: center; padding: 20px; color: #292B2F;">Create Account</h3>
+        <div class="form-container">
+            <custom-input [(ngModel)]="name" placeholder="Name" type="text"></custom-input>
+            <custom-input [(ngModel)]="lastname" placeholder="Lastname" type="text"></custom-input>
+            <custom-input [(ngModel)]="email" placeholder="E-mail Adress" type="email"></custom-input>
+            <custom-input [(ngModel)]="password" placeholder="Password" type="password"></custom-input>
+            <custom-input [(ngModel)]="confirmPassword" placeholder="Confirm Password" type="password"></custom-input>
+        </div>
+        <div style="width: 100%;">
+            <custom-btn [onClick]="signUp" text="Sign Up"></custom-btn>
+        </div>
+        <p style="margin-top: 20px; font-size: 14px;">Already have an account?
+            <span>
+                <a routerLink="/login" style="color: #F73E00; font-weight: 600; text-decoration: none;">
+                    Sign in
+                </a>
+            </span>
+        </p>
+    </div>
+</div>
