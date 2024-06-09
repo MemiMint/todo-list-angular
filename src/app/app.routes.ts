@@ -4,6 +4,7 @@ import { SignupComponent } from "./features/authentication/signup/signup.compone
 import { ForgotPasswordComponent } from './features/authentication/forgot-password/forgot-password.component';
 import { ProjectComponent } from './features/dashboard/project/project.component';
 import { ProjectsComponent } from './features/dashboard/projects/projects.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 
 export const routes: Routes = [
     {
@@ -17,6 +18,10 @@ export const routes: Routes = [
     {
         path: "passwordrecovery",
         component: ForgotPasswordComponent
+    },
+    {
+        path: "dashboard",
+        component: DashboardComponent
     },
     {
         path: "project",
